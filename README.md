@@ -59,15 +59,14 @@
    - KVM là công nghệ ảo hóa mới cho phép ảo hóa thực sự trên nền tảng phần cứng. Do đó máy chủ KVM giống như XEN được cung cấp riêng tài nguyên để sử dụng, tránh việc tranh chấp tài nguyên với máy chủ khác trên cùng node. Máy chủ gốc được cài đặt Linux, nhưng KVM hỗ trợ tạo máy chủ ảo có thể chạy cả Linux, Windows. Nó cũng hỗ trợ cả x86 và x86-64 system.
    
    
-
-
-
 ### <a name="noidung"></a>2 Nội Dung Chính
 - Sau khi dạo qua một vòng về các công nghê ảo hóa phổ biến hiện nay. Giờ chúng ta sẽ cùng đi vào vấn đề chính trong phần này đó là tìm hiểu về  **KVM (Kernel-based Virtual Machine)**:
 
 - Tìm hiểu về KVM mình chia làm 3 phần để sẽ giới thiệu cho mọi người (đây là hệ thông thực tế bên mình đang chạy).
 
     1. Cài đặt, cầu hình và quản lý KVM bằng commdline và giao diện đồ họa.
+    
+        - Mình sẽ tập trung vào vấn đề cài đặt và cấu hình.
 
     2. Cài đặt và cấu hình OVS(open virtual switch).
 
