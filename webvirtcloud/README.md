@@ -192,7 +192,7 @@
 
 - Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
 
-###<a href="https://github.com/letran3691/AoHoa/tree/master/dhcp" rel="nofollow"> Cấu hình DHCP Server <a/>
+<a href="https://github.com/letran3691/AoHoa/tree/master/dhcp" rel="nofollow"> Cấu hình DHCP Server <a/>
 
 
 #### Tài liệu tham khảo
