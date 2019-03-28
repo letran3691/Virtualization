@@ -62,10 +62,23 @@ OpenvSwitch (OVS) là một dự án về chuyển mạch ảo đa lớp (multil
  ![Selection_024](https://user-images.githubusercontent.com/19284401/55134210-b8bfe100-515a-11e9-952f-fbaebdbadf72.png)
  
  
- 
+ - Một vài lệnh cơ bản với OVS
+    
+    - show switch ảo
+            
+             ovs-vsctl show   
+     
+![Selection_033](https://user-images.githubusercontent.com/19284401/55146997-2af2ee80-5178-11e9-949c-31f3639fa293.png)
+    
+   - Mỗi 1 port ở đây sẽ tương ứng với 1 interface của VM đang cắm vào
+   
+   - show ra các thông tin liên quan đên interface cắm trên swithc br0
+    
+            ovs-ofctl show br0
+            
+![Selection_034](https://user-images.githubusercontent.com/19284401/55147336-c8e6b900-5178-11e9-9fd2-ac879fbf02fc.png)
 
-                      
-
+Tìm hiểu thêm <a href="http://www.openvswitch.org/support/dist-docs/"> tại đây. <a/>
 
 
 
