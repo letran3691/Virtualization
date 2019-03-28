@@ -188,3 +188,6 @@
 
         virsh -c qemu+tcp://IP_host/system nodeinfo        
       
+- Như vậy là ta đã cấu hình webvirtcloud
+
+- Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM   
