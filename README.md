@@ -2,14 +2,18 @@
 
 ## [1. Khái niệm ảo hóa](#aohoa)
 
-
+### [1.1 OpenVZ](#openVZ)
+### [1.2 XEN](#XEN)
+### [1.2 VMWare](#VMWare)
+### [1.2 KVM](#KVM)
+### [2 Nội dung chính](#noidung)
 
 ### <a name="aohoa"></a>1.Khái niệm ảo hóa là gì?
 - Ảo hóa với nhiều tên gọi khác nhau như VPS, máy chủ ảo,… là máy chủ được tạo ra bằng cách phân chia máy chủ vật lý thành nhiều máy chủ nhỏ khác nhau. Chúng mang đầy đủ tính chất, chức năng của một máy chủ riêng biệt, được chạy dưới dạng chia sẻ tài nguyên từ máy chủ ban đầu. Tùy thuộc vào nhu cầu sử dụng mà các doanh nghiệp lựa chọn dử dụng máy chủ ảo có các tính chất riêng.
 
 - Một số công nghệ áo hóa phổ biến hiện nay OpenVZ, XEN, VMWare, KVM.
 
-    -  **OpenVZ (Open Virtuozzo)**:
+### <a name="openVZ"></a>1.1 OpenVZ
         
    ![technology](https://user-images.githubusercontent.com/19284401/55128967-fd8e4c80-5147-11e9-8cea-e4b19e2be622.jpg)
 
@@ -29,7 +33,7 @@
    - OpenVZ sử dụng hệ thống file dùng chung, vì thế mối VPS thực chất chỉ là 1 Thư mục được change root.
      
         
-- **XEN**:
+### <a name="XEN"></a>1.2 XEN
     
    ![xendiag](https://user-images.githubusercontent.com/19284401/55128904-cddf4480-5147-11e9-88e3-6588bb23075e.png)
 
@@ -41,14 +45,14 @@
         
        - XEN yêu cầu tài nguyên vật lý đầy đủ cho mỗi VPS, do đó nhà cung cấp dịch vụ cũng phải tăng cường tài nguyên vật lý trên máy chủ thật
             
-   - **VMWare**:  
+### <a name="VMWare"></a>1.3 VMWare 
 
 ![VMware-ESXi](https://user-images.githubusercontent.com/19284401/55128984-0d0d9580-5148-11e9-9ffa-55fe4f9d8524.jpg)
 
     
    - Công nghệ ảo hóa VMWare do công ty VMWare phát triển, nó hỗ trợ ảo hóa từ mức phần cứng. Công nghệ này thường áp dụng cho các công ty lớn như ngân hàng, và ít được sử dụng cho các VPS thương mại trên thị trường hiện nay.
         
-   - **KVM (Kernel-based Virtual Machine)**:
+### <a name="KVM"></a>1.4 KVM (Kernel-based Virtual Machine)
     
 ![1_zL5mLsbMAWGplkluTUaqtw](https://user-images.githubusercontent.com/19284401/55129371-704bf780-5149-11e9-891a-4f2abb7e6d90.png)
     
@@ -58,6 +62,9 @@
 - Sau khi dạo qua một vòng về các công nghê ảo hóa phổ biến hiện nay. Giờ chúng ta sẽ cùng đi vào vấn đề chính trong phần này đó là tìm hiểu về  **KVM (Kernel-based Virtual Machine)**:
 
 Tìm hiểu về KVM mình chia làm 3 phần để sẽ giới thiệu cho mọi người (đây là hệ thông thực tế bên mình đang chạy)
+
+
+### <a name="noidung"></a>2 Nội Dung Chính
 
 1. Cài đặt, cầu hình và quản lý KVM bằng commdline và gia diên đồ họa
 
