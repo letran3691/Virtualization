@@ -155,9 +155,36 @@
         - bỏ dấu # ở đầu đi
         
     
-    vi /etc/libvirt/libvirtd.con
+        vi /etc/libvirt/libvirtd.con
     
-    listen_tls = 0
-    listen_tcp = 1
-    auth_tcp="sasl"
+        listen_tls = 0
+        listen_tcp = 1
+        auth_tcp="sasl"
+    
+    
+    
+   -  Edit file libvirtd
+    
+        vi /etc/sysconfig/libvirtd
+    
+  - Bỏ commnent
+   
+        LIBVIRTD_ARGS="--listen"
+        
+        
+- Restart libvirt
+        
+        systemctl restart libvirtd
+          
+- Tạo user kết nối tcp
+    
+        saslpasswd2 -a libvirt username
+        
+- Import user to file password.db
 
+        sasldblistusers2 -f /etc/libvirt/passwd.db
+        
+- Test connect tcp
+
+        virsh -c qemu+tcp://IP_host/system nodeinfo        
+      
