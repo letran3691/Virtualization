@@ -74,7 +74,7 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 
         yum -y install qemu-kvm libvirt virt-install libguestfs libvirt-client virt-manager virt-top virt-viewer virt-who
       
-    - Ở đây mình không cài linux-bridge mà thay, vào đó mình sẽ cài OVS(open visual switch). mình sẽ nhắc đến ở phần sau
+    - Ở đây mình không cài linux-bridge mà thay, vào đó mình sẽ cài OVS(open vswitch). mình sẽ nhắc đến ở phần sau
     
             yum install "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils -y
             
@@ -89,7 +89,7 @@ Như vậy là đã cấu hình xong KVM.
 
 
 ### <a name="2.1"> </a>2.1 Network
-- Giờ ta sẽ chuyển sang cấu hình OVS(Open visual switch)
+- Giờ ta sẽ chuyển sang cấu hình OVS(Open vswitch)
  
      <a href="https://github.com/letran3691/AoHoa/tree/master/OVS#1" rel="nofollow">  Cài đặt OVS</a>
      
