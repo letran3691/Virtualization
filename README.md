@@ -70,7 +70,7 @@
         
          <a href="https://github.com/letran3691/AoHoa/tree/master/kvm" rel="nofollow">Cài đặt KVM</a>
 
-   2. Cài đặt và cấu hình OVS(open virtual switch).
+   2. Cài đặt và cấu hình OVS(open vswitch).
     
          <a href="https://github.com/letran3691/AoHoa/tree/master/OVS" rel="nofollow">Cài đặt OVS</a>
 
