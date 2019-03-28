@@ -64,13 +64,17 @@
 
 - Tìm hiểu về KVM mình chia làm 3 phần để sẽ giới thiệu cho mọi người (đây là hệ thông thực tế bên mình đang chạy).
 
-    1. Cài đặt, cầu hình và quản lý KVM bằng commdline và giao diện đồ họa.
+   1. Cài đặt, cầu hình và quản lý KVM bằng commdline và giao diện đồ họa.
     
         - Mình sẽ tập trung vào vấn đề cài đặt và cấu hình.
+        
+         <a href="https://github.com/letran3691/AoHoa/tree/master/kvm" rel="nofollow">Cài đặt KVM</a>
 
-    2. Cài đặt và cấu hình OVS(open virtual switch).
+   2. Cài đặt và cấu hình OVS(open virtual switch).
+    
+         <a href="https://github.com/letran3691/AoHoa/tree/master/OVS" rel="nofollow">Cài đặt OVS</a>
 
-    3. Cấu hình web để quản lý KVM trên giao diện web.
+   3. Cấu hình web để quản lý KVM trên giao diện web.
 
 **ok let's go!!!!!**
 
