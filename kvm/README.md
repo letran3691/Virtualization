@@ -79,7 +79,8 @@ Như vậy là đã cấu hình xong KVM.
 
  Giờ ta sẽ chuyển sang cấu hình OVS(Open visual switch)
  
- 
+<a href="https://github.com/letran3691/AoHoa/tree/master/OVS#1" rel="nofollow">  Cài đặt OVS</a>
+
  
  
        
