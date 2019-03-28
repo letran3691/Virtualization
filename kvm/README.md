@@ -9,6 +9,8 @@
   - [2.2 Create VM](#2.2)
   - [2.3 Lệnh cơ bản](#2.3)
   - [2.3 Tool virt-manager](#2.4)
+### [3 Tài liệu tham khảo](#3)
+
 ------------
 
 ### <a name="1"></a>1. Giới thiệu KVM
@@ -442,9 +444,11 @@ OK Vậy là đã cấu hình xong!!!
 
  
        
-Tài liệu tham khảm:
+### <a name="3">Tài liệu tham khảm
 
- 1: https://github.com/hocchudong/thuctap012017/blob/master/TamNT/Virtualization/docs/KVM/1.Tim_hieu_KVM.md#1.2
+ 1: https://github.com/hocchudong/thuctap012017/blob/master/TamNT/Virtualization/docs/KVM/1.Tim_hieu_KVM.md
+ 
+ 2: https://jamielinux.com/docs/libvirt-networking-handbook/
 
 
 
