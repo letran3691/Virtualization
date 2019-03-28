@@ -1,4 +1,4 @@
-- Phần này thì mình cũng không có gì để giới thiệu nhiều, mình sẽ đi vào cấu hình luôn.
+- Phần này thì mình cũng không có gì để giới thiệu, mình sẽ đi vào cấu hình luôn.
 
 #### 1 install packet cần thiết.
 
@@ -152,9 +152,9 @@
         
    - Tìm đến **sasldb_path: /etc/libvirt/passwd.db**
    
-        - bỏ dấu # ở đầu đi
+      - bỏ dấu # ở đầu đi
         
-    
+        
         vi /etc/libvirt/libvirtd.con
     
         listen_tls = 0
@@ -165,7 +165,7 @@
     
    -  Edit file libvirtd
     
-        vi /etc/sysconfig/libvirtd
+            vi /etc/sysconfig/libvirtd
     
   - Bỏ commnent
    
@@ -190,4 +190,11 @@
       
 - Như vậy là ta đã cấu hình webvirtcloud
 
-- Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM   
+- Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
+
+###<a href="https://github.com/letran3691/AoHoa/tree/master/dhcp" rel="nofollow"> Cấu hình DHCP Server <a/>
+
+
+#### Tài liệu tham khảo
+
+   1)  https://github.com/retspen/webvirtcloud
