@@ -376,7 +376,9 @@ ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran36
              
              - **Chú ý**: khi bạn muốn xóa 1 VM. Nó sẽ hỏi bạn là có muốn xóa cả disk của VM ko
              
-                - Nếu bạn muốn tái sử dụng lại VM này thì bạn hay bỏ tích **Delete asociated storage files**
+                - Nếu bạn muốn tái sử dụng lại VM này thì bạn hay bỏ tích **Delete asociated storage files**. Vấn đề này khá hay, nếu như VM có bạn có 2 disk. 1 disk của OS, 1 disk chứa data. Trường hợp gặp vấn đề gì đó mà bắt buộc phải cài lại OS. Thay vì bảo phải copy hay move data ra 1 chỗ khác, và sau khi cài lại OS lại phải copy lại thì giờ bạn chỉ cần mount lại disk đó và VM mới là xong.
+                 
+                
    
              
 - Giờ chúng ta thử cài đặt mới 1 VM từ **virt-manager**
