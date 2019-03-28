@@ -5,8 +5,9 @@
   - [1.1 Tính năng nổi bật](#1.1)
   - [1.2 Cấu trúc của KVM](#1.2)
 #### [2. Cài đặt KVM Centos7](#2)
-
-
+  - [2.1 Network](2.1)
+  - [2.2 Create VM](2.2)
+  - [2.3 Lệnh cơ bản](2.3)
 
 ------------
 
@@ -86,6 +87,8 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
        
 Như vậy là đã cấu hình xong KVM.
 
+
+#### <a name="2.1"> </a>2.1 Network
 - Giờ ta sẽ chuyển sang cấu hình OVS(Open visual switch)
  
      <a href="https://github.com/letran3691/AoHoa/tree/master/OVS#1" rel="nofollow">  Cài đặt OVS</a>
@@ -274,6 +277,8 @@ Như vậy là đã cấu hình xong KVM.
 
 ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran3691/AoHoa/tree/master/kvm" rel="nofollow">KVM</a> và <a href="https://github.com/letran3691/AoHoa/tree/master/OVS" rel="nofollow"> OVS</a>
 
+#### <a name="2.2"> </a>2.2 Create VM
+
 - Giờ chúng ta sẽ cài đặt mới 1 VM.
     - Trước hết sẽ tạo 1 thư mục chưa images thay vì thư mục mặc định của KVM
     
@@ -307,6 +312,9 @@ ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran36
        
 ![Selection_028](https://user-images.githubusercontent.com/19284401/55144744-114fa800-5174-11e9-9dff-9559e3a1f64a.png)
 ![Selection_029](https://user-images.githubusercontent.com/19284401/55144754-144a9880-5174-11e9-979c-1fe000373427.png)
+
+
+#### <a name="2.3"></a>2.3 Lệnh cơ bản
 
 - Một vài lệnh cơ bản để thao tác với KVM
         
