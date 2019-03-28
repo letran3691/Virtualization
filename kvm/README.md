@@ -5,9 +5,9 @@
   - [1.1 Tính năng nổi bật](#1.1)
   - [1.2 Cấu trúc của KVM](#1.2)
 #### [2. Cài đặt KVM Centos7](#2)
-  - [2.1 Network](2.1)
-  - [2.2 Create VM](2.2)
-  - [2.3 Lệnh cơ bản](2.3)
+  - [2.1 Network](#2.1)
+  - [2.2 Create VM](#2.2)
+  - [2.3 Lệnh cơ bản](#2.3)
 
 ------------
 
