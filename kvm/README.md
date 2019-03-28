@@ -1,16 +1,10 @@
 ### MỤC LỤC
+-------------
 
 ##### [1. Giới thiệu KVM](#1)
   - [1.1 Tính năng nổi bật](#1.1)
   - [1.2 Cấu trức của KVM](#1.2)
 #### [2. Cài đặt KVM Centos7](#2)
-
-
-
-
-
-
-
 
 
 
@@ -46,13 +40,13 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 
    ![687474703a2f2f696d6775722e636f6d2f777341356846372e6a7067](https://user-images.githubusercontent.com/19284401/55133059-f7ec3300-5156-11e9-9efd-0f7abee2dbf5.png)
    
-   - User-facing tools: Là các công cụ quản lý máy ảo hỗ trợ KVM Các công cụ có giao diện đồ họa (như virt-manager) hoặc giao diện dòng lệnh như (virsh) và virt-tool (Các công cụ này được quản lý bởi thư viện libvirt).
+   - **User-facing tools**: Là các công cụ quản lý máy ảo hỗ trợ KVM Các công cụ có giao diện đồ họa (như virt-manager) hoặc giao diện dòng lệnh như (virsh) và virt-tool (Các công cụ này được quản lý bởi thư viện libvirt).
    
-   - Management layer: Lớp này là thư viện libvirt cung cấp API để các công cụ quản lý máy ảo hoặc các hypervisor tương tác với KVM thực hiện các thao tác quản lý tài nguyên ảo hóa, bởi vì KVM chỉ là một module của nhân hỗ trợ cơ chế mapping các chỉ dẫn của CPU ảo để thực hiện trên CPU thật, nên tự thân KVM không hề có khả năng giả lập và quản lý tài nguyên ảo hóa. Mà phải dùng nhờ các công nghệ hypervisor khác, thường là QEMU.
+   - **Management layer**: Lớp này là thư viện libvirt cung cấp API để các công cụ quản lý máy ảo hoặc các hypervisor tương tác với KVM thực hiện các thao tác quản lý tài nguyên ảo hóa, bởi vì KVM chỉ là một module của nhân hỗ trợ cơ chế mapping các chỉ dẫn của CPU ảo để thực hiện trên CPU thật, nên tự thân KVM không hề có khả năng giả lập và quản lý tài nguyên ảo hóa. Mà phải dùng nhờ các công nghệ hypervisor khác, thường là QEMU.
 
-   - Virtual machine: Chính là các máy ảo người dùng tạo ra. Thông thường, nếu không sử dụng các công cụ như virsh hay virt-manager, KVM sẽ sử được sử dụng phối hợp với một hypervisor khác điển hình là QEMU.
+   - **Virtual machine**: Chính là các máy ảo người dùng tạo ra. Thông thường, nếu không sử dụng các công cụ như virsh hay virt-manager, KVM sẽ sử được sử dụng phối hợp với một hypervisor khác điển hình là QEMU.
 
-   - Kernel support: Chính là KVM, cung cấp một module làm hạt nhân cho hạ tầng ảo hóa (kvm.ko) và một module kernel đặc biệt chỉ hỗ trợ các vi xử lý VT-x hoặc AMD-V (kvm-intel.ko hoặc kvm-amd.ko) để nâng cao hiệu suất ảo hóa.
+   - **Kernel support**: Chính là KVM, cung cấp một module làm hạt nhân cho hạ tầng ảo hóa (kvm.ko) và một module kernel đặc biệt chỉ hỗ trợ các vi xử lý VT-x hoặc AMD-V (kvm-intel.ko hoặc kvm-amd.ko) để nâng cao hiệu suất ảo hóa.
    
     
 ### <a name="2"> </a>2 Cài đặt KVM   
@@ -84,6 +78,8 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 Như vậy là đã cấu hình xong KVM.
 
  Giờ ta sẽ chuyển sang cấu hình OVS(Open visual switch)
+ 
+ 
  
  
        
