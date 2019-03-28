@@ -319,6 +319,7 @@ ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran36
    - list ra tất cả các VM có trong host cả chạy lẫn ko chạy
     
             virsh list --all
+            
    ![Selection_031](https://user-images.githubusercontent.com/19284401/55144961-75726c00-5174-11e9-8d59-cbcbbcbb7135.png)
    
    - run và shutdown VM
@@ -371,7 +372,9 @@ ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran36
              ![Selection_001](https://user-images.githubusercontent.com/19284401/55148124-33e4bf80-517a-11e9-8ea0-aa9266165d96.png)
              
              - Đây chính là giao diện của tool **virt-manager**
+             
              - Tại đây các bạn có thể thao tác mọi thứ với VM như: start, shutdown, del VM.
+             
              ![Selection_013](https://user-images.githubusercontent.com/19284401/55153185-685d7900-5184-11e9-8e59-c132b7ea5181.png)
              
              - **Chú ý**: khi bạn muốn xóa 1 VM. Nó sẽ hỏi bạn là có muốn xóa cả disk của VM ko
@@ -385,24 +388,41 @@ ok vây là chúng ta đã cấu hình xong <a href="https://github.com/letran36
     
     - Tạo mới VM
     - Cài từ file iso
+    
 ![Selection_002](https://user-images.githubusercontent.com/19284401/55151590-28e15d80-5181-11e9-8c33-953d304da064.png)
-    - Chọn nơi chứa file iso.
+
+   - Chọn nơi chứa file iso.
+    
 ![Selection_011](https://user-images.githubusercontent.com/19284401/55151772-8e354e80-5181-11e9-9322-322d7636d1ac.png)
-    - set RAM và CPU cho VM.
+
+   - set RAM và CPU cho VM.
+    
 ![Selection_004](https://user-images.githubusercontent.com/19284401/55151595-2aab2100-5181-11e9-819e-84be2041c15a.png)
-    - Tạo chọn disk và mơi lưu disk.
+
+   - Tạo chọn disk và mơi lưu disk.
+    
 ![Selection_005](https://user-images.githubusercontent.com/19284401/55151600-2bdc4e00-5181-11e9-93b1-c9cda755583f.png)
 ![Selection_008](https://user-images.githubusercontent.com/19284401/55151608-30a10200-5181-11e9-9ec4-bc52e3ce3e5c.png)
-    - Phần này nếu như bạn nào đã dùng VMWARE thì sẽ thấy nó khá quen
-    - ở đây các bạn có thể chỉnh sửa lại nhưng cấu hình của VM trước đó.
+
+   - Phần này nếu như bạn nào đã dùng VMWARE thì sẽ thấy nó khá quen
+    
+   - ở đây các bạn có thể chỉnh sửa lại nhưng cấu hình của VM trước đó.
+    
 ![Selection_010](https://user-images.githubusercontent.com/19284401/55151614-339bf280-5181-11e9-8365-0d1d993874ac.png)
-    - Mục NIC này bên phải bạn sẽ thấy NETWORK SOURCE: sẽ là nơi list ra các network mà KVM đang quản lý. mà ta đã tạo ra trước đó.
-    - Sau khi cấu hình xong nhấn **APPLY** rồi **begin install** 
+
+   - Mục NIC này bên phải bạn sẽ thấy NETWORK SOURCE: sẽ là nơi list ra các network mà KVM đang quản lý. mà ta đã tạo ra trước đó.
+    
+   - Sau khi cấu hình xong nhấn **APPLY** rồi **begin install**
+    
 ![Selection_009](https://user-images.githubusercontent.com/19284401/55151612-31d22f00-5181-11e9-97dc-9a07c62090a4.png)
-    - Quá trình cài đặt bắt đầu, các cài đặt thì như bình thường ko có gì khác biệt.
+
+   - Quá trình cài đặt bắt đầu, các cài đặt thì như bình thường ko có gì khác biệt.
+   
 ![Selection_012](https://user-images.githubusercontent.com/19284401/55152261-8fb34680-5182-11e9-8930-7a93c9e97cbf.png)
 
+OK Vậy là đã cấu hình xong!!!
 
+- Giờ mình sẽ hướng dẫn các bạn cài đặt và cấu hình webvirtcloud để quản lý KVM trên giao diện web.
 
              
              
