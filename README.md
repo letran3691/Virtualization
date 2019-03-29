@@ -1,12 +1,28 @@
 # MỤC LỤC
 
-## [1. Khái niệm ảo hóa](#aohoa)
+--------------
 
+### [0. Đôi lời chia sẻ](#0)
+### [1. Khái niệm ảo hóa](#aohoa)
 ### [1.1 OpenVZ](#openVZ)
 ### [1.2 XEN](#XEN)
 ### [1.3 VMWare](#VMWare)
 ### [1.4 KVM](#KVM)
 ### [2 Nội dung chính](#noidung)
+
+-----------------------
+
+### <a name="0"><a/> Đôi lời chia sẻ
+
+   - Lời đầu tiên mình xin cảm ơn ae đã bớt chút thời gian để đọc bài viết của mình.
+   
+   - Ỏ bài viết này mình sẽ không đi vào giới thiệu chi tiết từng công nghệ hoặc chi tiết các tính năng của công nghệ mà mình đề cặp trong bài. Thay vào đó mình sẽ tập trung vào triền khai và cấu hình, cũng như vẫn hành 1 công nghệ cụ thể nào đó.
+   
+   - Nhiều ae sẽ nghỉ là 1 bài viết hướng dẫn thì nó phải chi tiết để người mới có thể nắm được. Nhưng thực tế để nắm bắt được chi tiết về 1 công nghệ nào đó sẽ mất rất nhiều thời gian. Nhưng sau khi tìm hiều xong từ A-Z, thì tìm hiểu đến Z lại quên A. Chính vì vậy mình đưa ra hướng đó là vừa cấu hình vừa tìm hiểu, lỗi ở đâu sẽ bug ở đó, điều này sẽ giúp các bạn dễ nắm bắt hơn.
+   
+   - Bài viết này là 1 case hệ thống thực tế mà công ty mình đang vận hành, chứ không phải là lý thuyết.
+   
+   - Nếu ai muốn tìm hiểu chi tiết vấn đề nào đó vui lòng đọc thêm tại các bài tham khảo. 
 
 ### <a name="aohoa"></a>1.Khái niệm ảo hóa là gì?
 - Ảo hóa với nhiều tên gọi khác nhau như VPS, máy chủ ảo,… là máy chủ được tạo ra bằng cách phân chia máy chủ vật lý thành nhiều máy chủ nhỏ khác nhau. Chúng mang đầy đủ tính chất, chức năng của một máy chủ riêng biệt, được chạy dưới dạng chia sẻ tài nguyên từ máy chủ ban đầu. Tùy thuộc vào nhu cầu sử dụng mà các doanh nghiệp lựa chọn dử dụng máy chủ ảo có các tính chất riêng.
