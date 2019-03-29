@@ -256,6 +256,64 @@
 - Như <a href="https://github.com/letran3691/Virtualization/tree/master/kvm#1.3" rel="nofollow">Topo<a/> ban đầu và trong hình các bạn cũng thấy hiện tại mình đang có 2 host KVM.
      
      ![Selection_005](https://user-images.githubusercontent.com/19284401/55218442-b631ba00-5234-11e9-817b-c51bcba99e8c.png)
+     
+- click vào **instances** các bạn sẽ thấy toàn bộ các VM đang có trên các host
+     
+     ![Selection_007](https://user-images.githubusercontent.com/19284401/55219744-49b8ba00-5238-11e9-90d2-a8ab01e2f5ad.png)
+     
+- Menu của 1 instance   
+    
+    ![Selection_008](https://user-images.githubusercontent.com/19284401/55219958-b8961300-5238-11e9-91be-2ada951f471b.png)
+    
+   - Tab Power
+   
+        - stop hoặc start 1 VM
+        
+   - Tab Access
+
+        - dùng để kết nối noVNC   
+        
+   ![Selection_009](https://user-images.githubusercontent.com/19284401/55220297-8638e580-5239-11e9-9beb-709e96c2a43d.png)
+   
+     - Sau khi click vào console sẽ có 1 của sổ web, hiện lên để các bạn có thể đăng nhập vào VM, và thao tác với VM như bình thường.
+     
+    ![Selection_010](https://user-images.githubusercontent.com/19284401/55220299-86d17c00-5239-11e9-8a4f-a540db9ebd6a.png)
+    
+   - Tab resize
+   
+    ![Selection_011](https://user-images.githubusercontent.com/19284401/55220575-2858cd80-523a-11e9-85d9-1005b6bfa894.png)
+    
+    - đây là 1 tab cực hay. mình ko biết các công nghệ ảo hóa khác có làm được điều này ko.
+        
+        - Đó là thay đổi phần cứng như RAM vs CPU của VM khi nó vẫn đang chạy 
+        
+        -  để thực hiện được việc nào các bạn cần chú ý 
+            
+            - Mục **Maximum Alocaltion** phải cao hơn Mục **Current alocaltion**. điều này cần có sự tính toán từ trước là VM này có cần nâng cấp về mặt phần cứng hay ko?
+            
+    - Tab Snapshot
+    
+    ![Selection_013](https://user-images.githubusercontent.com/19284401/55221842-07de4280-523d-11e9-89c5-13a0036b0a82.png)
+    
+      - Tạo và revert snapshot cho VM. nếu bị VM đang chạy thì nó sẽ ẩn tính năng này đi. khi VM tắt thì tình năng này mới đc bật.
+    
+    ![Selection_015](https://user-images.githubusercontent.com/19284401/55222060-7fac6d00-523d-11e9-9929-5607a9f4fc85.png)
+    ![Selection_016](https://user-images.githubusercontent.com/19284401/55222061-80450380-523d-11e9-9058-c39e3dae8558.png)
+   
+   - Tab Setting
+   
+   ![Selection_017](https://user-images.githubusercontent.com/19284401/55222203-e29e0400-523d-11e9-8434-81cb72ff3a2c.png)
+   
+     - đây là tab có nhiều tính năng nhất. Chúng ta sẽ đi qua 1 vài tab quan trọng. còn lại các bạn tìm hiểu dần dần.
+     
+       
+            
+            
+   
+ 
+   
+
+
 
      
 
