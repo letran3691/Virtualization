@@ -4,6 +4,7 @@
 ### [1. Giới thiệu KVM](#1)
   - [1.1 Tính năng nổi bật](#1.1)
   - [1.2 Cấu trúc của KVM](#1.2)
+  - [1.3 Topo](#1.3)
 ### [2. Cài đặt KVM Centos7](#2)
   - [2.1 Network](#2.1)
   - [2.2 Create VM](#2.2)
@@ -45,9 +46,6 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 
  - Do KVM kết hợp QEMU nên các máy ảo và mạng ảo có file cấu hình xml sẽ được lưu lại tại thư mục /etc/libvirt/qemu/
 
-
-   
-   
 ### <a name="1.2"></a>1.2  Cấu trúc của KVM
 
    ![687474703a2f2f696d6775722e636f6d2f777341356846372e6a7067](https://user-images.githubusercontent.com/19284401/55133059-f7ec3300-5156-11e9-9efd-0f7abee2dbf5.png)
@@ -60,6 +58,11 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 
    - **Kernel support**: Chính là KVM, cung cấp một module làm hạt nhân cho hạ tầng ảo hóa (kvm.ko) và một module kernel đặc biệt chỉ hỗ trợ các vi xử lý VT-x hoặc AMD-V (kvm-intel.ko hoặc kvm-amd.ko) để nâng cao hiệu suất ảo hóa.
    
+    
+### <a name="1.3"><a/>1.3 Topo 
+    
+   ![Selection_014](https://user-images.githubusercontent.com/19284401/55211418-765fd800-521e-11e9-9fef-cc89c25e05cd.png)
+
     
 ### <a name="2"> </a>2 Cài đặt KVM   
 

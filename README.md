@@ -16,9 +16,9 @@
 
    - Lời đầu tiên mình xin cảm ơn ae đã bớt chút thời gian để đọc bài viết của mình.
    
-   - Ỏ bài viết này mình sẽ không đi vào giới thiệu chi tiết từng công nghệ hoặc chi tiết các tính năng của công nghệ mà mình đề cặp trong bài. Thay vào đó mình sẽ tập trung vào triền khai và cấu hình, cũng như vẫn hành 1 công nghệ cụ thể nào đó.
+   - Ỏ bài viết này mình sẽ không đi vào giới thiệu chi tiết từng công nghệ hoặc chi tiết các tính năng của công nghệ mà mình đề cặp trong bài. Thay vào đó mình sẽ tập trung vào triển khai và cấu hình, cũng như vận hành 1 công nghệ cụ thể nào đó.
    
-   - Nhiều ae sẽ nghỉ là 1 bài viết hướng dẫn thì nó phải chi tiết để người mới có thể nắm được. Nhưng thực tế để nắm bắt được chi tiết về 1 công nghệ nào đó sẽ mất rất nhiều thời gian. Nhưng sau khi tìm hiều xong từ A-Z, thì tìm hiểu đến Z lại quên A. Chính vì vậy mình đưa ra hướng đó là vừa cấu hình vừa tìm hiểu, lỗi ở đâu sẽ bug ở đó, điều này sẽ giúp các bạn dễ nắm bắt hơn.
+   - Nhiều ae sẽ nghĩ là 1 bài viết hướng dẫn thì nó phải chi tiết để người mới có thể nắm được. Nhưng thực tế để nắm bắt được chi tiết về 1 công nghệ nào đó sẽ mất rất nhiều thời gian. Nhưng sau khi tìm hiểu xong từ A-Z, thì tìm hiểu đến Z lại quên A. Chính vì vậy mình đưa ra hướng đó là vừa cấu hình vừa tìm hiểu, lỗi ở đâu sẽ bug ở đó, điều này sẽ giúp các bạn dễ nắm bắt hơn.
    
    - Bài viết này là 1 case hệ thống thực tế mà công ty mình đang vận hành, chứ không phải là lý thuyết.
    
