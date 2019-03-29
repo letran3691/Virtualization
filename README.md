@@ -1,14 +1,16 @@
-# MỤC LỤC
+### MỤC LỤC
 
 --------------
 
-### [0. Đôi lời chia sẻ](#0)
-### [1. Khái niệm ảo hóa](#aohoa)
-### [1.1 OpenVZ](#openVZ)
-### [1.2 XEN](#XEN)
-### [1.3 VMWare](#VMWare)
-### [1.4 KVM](#KVM)
-### [2 Nội dung chính](#noidung)
+#### [0. Đôi lời chia sẻ](#0)
+#### [1. Khái niệm ảo hóa](#aohoa)
+ - [1.1 OpenVZ](#openVZ)
+ - [1.2 XEN](#XEN)
+ - [1.3 VMWare](#VMWare)
+ - [1.4 KVM](#KVM)
+#### [2 Nội dung chính](#noidung)
+
+#### [3 Liên hệ](#3)
 
 -----------------------
 
@@ -78,7 +80,7 @@
 ### <a name="noidung"></a>2 Nội Dung Chính
 - Sau khi dạo qua một vòng về các công nghê ảo hóa phổ biến hiện nay. Giờ chúng ta sẽ cùng đi vào vấn đề chính trong phần này đó là tìm hiểu về  **KVM (Kernel-based Virtual Machine)**:
 
-- Tìm hiểu về KVM mình chia làm 3 phần để sẽ giới thiệu cho mọi người (đây là hệ thông thực tế bên mình đang chạy).
+- Tìm hiểu về KVM mình chia làm 4 phần để sẽ giới thiệu cho mọi người (đây là hệ thông thực tế bên mình đang chạy).
 
    1. Cài đặt, cầu hình và quản lý KVM bằng commdline và giao diện đồ họa.
     
@@ -93,8 +95,20 @@
    3. Cấu hình web để quản lý KVM trên giao diện web.
    
         <a href="https://github.com/letran3691/AoHoa/tree/master/webvirtcloud" rel="nofollow"> Cài đặt webvirtcloud <a/>
-
+        
+   4. Cài đặt dhcp server
+        
+       <a href="https://github.com/letran3691/Virtualization/tree/master/dhcp" rel="nofollow"> Cài đặt dhcp server <a/>
+       
 **ok let's go!!!!!**
+
+#### <a name=3><a/> 3. Liên hệ.
+    
+   - Mọi thắc mắc các bạn có thể liên hệ với mình qua các kênh sau.
+   
+   1, <a href="https://www.facebook.com/trunglv.91" rel="nofollow">Facebook<a>
+   
+   2 Telegram
 
         
             

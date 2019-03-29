@@ -1,5 +1,5 @@
 
-#### Cài đặt hdpcl
+#### Cài đặt dhcp
 
         yum -y install dhcp
 
@@ -31,8 +31,6 @@ Cấu hình dhcp.
 #### Restart và enable dhcp
 
        systemctl start dhcpd && systemctl enable dhcpd 
-
-
 
 
 #### Tài liệu tham khảo

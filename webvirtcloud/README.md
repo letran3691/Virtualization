@@ -185,6 +185,8 @@
 - Restart libvirt
         
         systemctl restart libvirtd
+        
+#### <a name="user"><a/>Tạo Tài khoản        
           
 - Tạo user kết nối tcp
     
@@ -205,10 +207,57 @@
       
 - Ok ta đã cấu hình webvirtcloud
 
+- Truy cập vào trang webvirtcloud
+
+    http://ip_cua_webvirtcloud
+
 - Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
+
+
 
 <a href="https://github.com/letran3691/AoHoa/tree/master/dhcp" rel="nofollow"> Cấu hình DHCP Server <a/>
 
+
+#### Vậy là ta đã cấu hình xong 1 hệ thống ảo hóa vừa và nhỏ cho 1 doanh nghiệp.
+
+- Giờ chúng ta sẽ tìm hiểu qua 1 về giao diện của webvirtcloud.
+
+- Như ở <a href="https://github.com/letran3691/Virtualization/tree/master/kvm#1.3" rel="nofollow"> **Topo** <a/>  các bạn cũng đã thấy toàn bộ VM trên 2 host KVM và KVM1  muốn ra được internet thì phải đi qua pfsense. Sẽ có 2 cách để các bạn truy cập vào webvirtcloud
+    
+    - 1 là cấu hình vpn trên pfsense để truy cập trực tiếp bằng ip của webvirtcloud.
+    
+    - 2 là NAT port trên pfsense và rồi truy vào webvirtcloud thông qua port NAT.
+    
+    ![Selection_001](https://user-images.githubusercontent.com/19284401/55217453-1f63fe00-5232-11e9-9f41-bbce0d25a8ac.png)
+
+    - Như các bạn đã thấy ỏ đây mình đã NAT webvirtcloud
+    
+        - Ở đâu mình có NAT 2 port cho webvirtcloud 8088 là port web còn port 6080 là port novnc có tác dụng truy cập vào VM trực tiếp từ giao diện web.
+        
+               
+- Truy cập nào.
+
+     - login 
+        
+     ![Selection_002](https://user-images.githubusercontent.com/19284401/55217880-29d2c780-5233-11e9-907d-aff44c459f69.png)
+     
+    - Tạo kết nối giữa webvirtcloud với các host KVM.
+    
+    ![Selection_003](https://user-images.githubusercontent.com/19284401/55218088-a82f6980-5233-11e9-9ada-910b006d678b.png)
+   
+    - Nhập các thông tin cần thiết
+    
+    ![Selection_004](https://user-images.githubusercontent.com/19284401/55218090-a82f6980-5233-11e9-84ff-ef804c115cb7.png)
+
+     - Label: đăt tên cho host
+     - FQDN / IP: nhập ip của host mà bạn muốn kết nội.
+     - user - pasword bạn nhập tài khoàn mà các bạn đã tạo ở bước [Tạo tài khoản](#user)
+     
+- Như <a href="https://github.com/letran3691/Virtualization/tree/master/kvm#1.3" rel="nofollow">Topo<a/> ban đầu và trong hình các bạn cũng thấy hiện tại mình đang có 2 host KVM.
+     
+     ![Selection_005](https://user-images.githubusercontent.com/19284401/55218442-b631ba00-5234-11e9-817b-c51bcba99e8c.png)
+
+     
 
 #### Tài liệu tham khảo
 
