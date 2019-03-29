@@ -37,6 +37,7 @@
         venv/bin/pip install -r conf/requirements.txt
         cp conf/nginx/webvirtcloud.conf /etc/nginx/conf.d/
         venv/bin/python manage.py migrate
+        
 ##### Cấu hình supervisor
         
         vi /etc/supervisord.conf
@@ -148,28 +149,37 @@
      
    - Tìm đến mech_list: 
    
-        - thay vào đó là **digest-md5**
+        - Thay vào đó là **digest-md5**
+        
+  ![Selection_015](https://user-images.githubusercontent.com/19284401/55211854-57fadc00-5220-11e9-9836-fe4eea2ac5de.png)
         
    - Tìm đến **sasldb_path: /etc/libvirt/passwd.db**
    
       - bỏ dấu # ở đầu đi
+      
+  ![Selection_016](https://user-images.githubusercontent.com/19284401/55211855-57fadc00-5220-11e9-9145-7dfbc4c0e44f.png)
         
-        
-        vi /etc/libvirt/libvirtd.con
+   - Cấu hình kết nối tcp
+       
+            vi /etc/libvirt/libvirtd.conf
     
-        listen_tls = 0
-        listen_tcp = 1
-        auth_tcp="sasl"
+            listen_tls = 0
+            listen_tcp = 1
+            auth_tcp="sasl"
     
-    
+   ![Selection_017](https://user-images.githubusercontent.com/19284401/55211856-58937280-5220-11e9-88f9-2f896a96aa8e.png)
+   ![Selection_018](https://user-images.githubusercontent.com/19284401/55211857-58937280-5220-11e9-8c63-7e9573ad2aa6.png)
+   
     
    -  Edit file libvirtd
     
             vi /etc/sysconfig/libvirtd
     
-  - Bỏ commnent
+   - Bỏ commnent
    
-        LIBVIRTD_ARGS="--listen"
+         LIBVIRTD_ARGS="--listen"
+         
+   ![Selection_019](https://user-images.githubusercontent.com/19284401/55211858-58937280-5220-11e9-96c1-bd1df5f407e5.png)
         
         
 - Restart libvirt
@@ -188,7 +198,12 @@
 
         virsh -c qemu+tcp://IP_host/system nodeinfo        
       
-- Như vậy là ta đã cấu hình webvirtcloud
+     ![Selection_020](https://user-images.githubusercontent.com/19284401/55212093-161e6580-5221-11e9-9c4a-f59a7e809bee.png)
+     
+- Như vậy là đã kết nối tcp thành công.
+
+      
+- Ok ta đã cấu hình webvirtcloud
 
 - Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
 
