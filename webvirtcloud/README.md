@@ -1,6 +1,23 @@
+## Mục Lục
+
+--------------
+
+### [1 Install packet](#1)
+
+### [2 Install webvirtcloud](#2)
+
+  - [2.1 Cấu hình suppervisord](#2.1)
+  - [2.2 Cấu hình nginx](#2.2)
+  - [2.3 Edit Webvirtcloud](#2.3)
+  - [2.4 Phân quyền && restart](#2.4)
+  - [2.5 Bảo mât](#2.5)
+
+### [3 Tính năng cơ bản](#3)
+
+
 - Phần này thì mình cũng không có gì để giới thiệu, mình sẽ đi vào cấu hình luôn.
 
-#### 1 install packet cần thiết.
+#### <a name="1"><a/> 1 install packet cần thiết.
 
 - Chú ý: phần cấu hình này sẽ được cấu hình trên 1 máy ảo  đang chạy trên chính host mà ta vừa cấu hình trước đó
 
@@ -30,7 +47,7 @@
         SECRET_KEY = ''
            
            
-#### Bắt đầu cài đặt webvircloud
+#### <a name="2"><a/>2 cài đặt webvircloud
         
         virtualenv venv
         source venv/bin/activate
@@ -38,7 +55,7 @@
         cp conf/nginx/webvirtcloud.conf /etc/nginx/conf.d/
         venv/bin/python manage.py migrate
         
-##### Cấu hình supervisor
+##### <a name="2.1"><a/>2.1 Cấu hình supervisor
         
         vi /etc/supervisord.conf
         
@@ -61,7 +78,7 @@
             redirect_stderr=true
 
 
-##### Edit lại file nginx.conf.
+#### <a name="2.3"><a/>2.3 Edit lại file nginx.conf.
 
             vi /etc/nginx.conf
 
@@ -88,7 +105,7 @@
             #        }
             #    }
             
-##### Edit lại file webvirtcloud.conf
+#### <a name="2.3"><a/>2.3 Edit lại file webvirtcloud.conf
 
             vi /etc/nginx/conf.d/webvirtcloud.conf   
             
@@ -122,6 +139,7 @@
                 }
             }   
             
+####<a name="2.4"><a/>2.4 Phân quyền && restart
 
 ##### Phân quyền cho thư mục /srv/webvirtcloud
 
@@ -137,7 +155,10 @@
     
         supervisorctl status
 
-##### cài đặt packet hỗ trợ hết nối bảo mật
+
+#### <a name="2.5"><a/>2.5 Bảo mật
+
+##### Cài đặt packet hỗ trợ hết nối bảo mật
     
    - **Cài đặt cả trên webvirtcloud và host**
    
@@ -234,6 +255,7 @@
     
         - Ở đâu mình có NAT 2 port cho webvirtcloud 8088 là port web còn port 6080 là port novnc có tác dụng truy cập vào VM trực tiếp từ giao diện web.
         
+#### <a name="3"><a/>3 Tính năng cơ bản. 
                
 - Truy cập nào.
 
@@ -326,7 +348,7 @@
     
     ![Selection_013](https://user-images.githubusercontent.com/19284401/55221842-07de4280-523d-11e9-89c5-13a0036b0a82.png)
     
-      - Tạo và revert snapshot cho VM. nếu bị VM đang chạy thì nó sẽ ẩn tính năng này đi. khi VM tắt thì tình năng này mới đc bật.
+     - Tạo và revert snapshot cho VM. nếu bị VM đang chạy thì nó sẽ ẩn tính năng này đi. khi VM tắt thì tình năng này mới đc bật.
     
     ![Selection_015](https://user-images.githubusercontent.com/19284401/55222060-7fac6d00-523d-11e9-9929-5607a9f4fc85.png)
     ![Selection_016](https://user-images.githubusercontent.com/19284401/55222061-80450380-523d-11e9-9058-c39e3dae8558.png)
@@ -368,21 +390,14 @@
              ![image](https://user-images.githubusercontent.com/19284401/55277535-ef048880-5333-11e9-88c0-a5d76996238e.png)
              
              - Đây là Tab lưu nội dung câu hình của 1 VM, các bạn cũng có thể sửa đổi cấu hình trực tiếp trên file này(VM phải đặc shutdown)
-
-        
-              
-          
+             
+- **Chú ý**: 1 số tính năng mặc định **webvirtcloud** ko có, mình đã sửa lại code để thêm 1 file tính năng đó nhé.          
              
              
-       
-  
-   
- 
-   
+- Vậy là chúng ta đã tìm hiểu xong công cụ quản lý KVM trên web. 
 
-
-
-     
+- Chúc các bạn thành công
+            
 
 #### Tài liệu tham khảo
 
