@@ -139,32 +139,32 @@
                 }
             }   
             
-####<a name="2.4"><a/>2.4 Phân quyền && restart
+#### <a name="2.4"><a/>2.4 Phân quyền && restart
 
-##### Phân quyền cho thư mục /srv/webvirtcloud
+#### Phân quyền cho thư mục /srv/webvirtcloud
 
         chown -R nginx:nginx /srv/webvirtcloud
         
-##### start và enable supervisor và nginx
+#### start và enable supervisor và nginx
 
         systemctl restart nginx && systemctl restart supervisord
         systemctl enable nginx && systemctl enable supervisord
      
      
-##### Check status supervisord
+#### Check status supervisord
     
         supervisorctl status
 
 
 #### <a name="2.5"><a/>2.5 Bảo mật
 
-##### Cài đặt packet hỗ trợ hết nối bảo mật
+#### Cài đặt packet hỗ trợ hết nối bảo mật
     
    - **Cài đặt cả trên webvirtcloud và host**
    
             yum -y install cyrus-sasl-gssapi.i686 cyrus-sasl-gssapi.x86_64 cyrus-sasl-md5.i686 cyrus-sasl-md5.x86_64 perl-Authen-DigestMD5.noarch -y
         
-##### Cấu hình kết nối trên host
+#### Cấu hình kết nối trên host
 
      vi /etc/sasl2/libvirt.conf
      
