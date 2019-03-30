@@ -141,30 +141,30 @@
             
 #### <a name="2.4"><a/>2.4 Phân quyền && restart
 
-#### Phân quyền cho thư mục /srv/webvirtcloud
+   #### Phân quyền cho thư mục /srv/webvirtcloud
 
         chown -R nginx:nginx /srv/webvirtcloud
         
-#### start và enable supervisor và nginx
+   #### start và enable supervisor và nginx
 
         systemctl restart nginx && systemctl restart supervisord
         systemctl enable nginx && systemctl enable supervisord
      
      
-#### Check status supervisord
+   #### Check status supervisord
     
         supervisorctl status
 
 
 #### <a name="2.5"><a/>2.5 Bảo mật
 
-#### Cài đặt packet hỗ trợ hết nối bảo mật
+   #### Cài đặt packet hỗ trợ hết nối bảo mật
     
    - **Cài đặt cả trên webvirtcloud và host**
    
             yum -y install cyrus-sasl-gssapi.i686 cyrus-sasl-gssapi.x86_64 cyrus-sasl-md5.i686 cyrus-sasl-md5.x86_64 perl-Authen-DigestMD5.noarch -y
         
-#### Cấu hình kết nối trên host
+   #### Cấu hình kết nối trên host
 
      vi /etc/sasl2/libvirt.conf
      
@@ -207,51 +207,51 @@
         
         systemctl restart libvirtd
         
-#### <a name="user"><a/>Tạo Tài khoản        
+   #### <a name="user"><a/>Tạo Tài khoản        
           
-- Tạo user kết nối tcp
+    - Tạo user kết nối tcp
+        
+            saslpasswd2 -a libvirt username
+            
+    - Import user to file password.db
     
-        saslpasswd2 -a libvirt username
-        
-- Import user to file password.db
-
-        sasldblistusers2 -f /etc/libvirt/passwd.db
-        
-- Test connect tcp
+            sasldblistusers2 -f /etc/libvirt/passwd.db
+            
+    - Test connect tcp
 
         virsh -c qemu+tcp://IP_host/system nodeinfo        
       
      ![Selection_020](https://user-images.githubusercontent.com/19284401/55212093-161e6580-5221-11e9-9c4a-f59a7e809bee.png)
      
-- Như vậy là đã kết nối tcp thành công.
-
-      
-- Ok ta đã cấu hình webvirtcloud
-
-- Truy cập vào trang webvirtcloud
-
-    http://ip_cua_webvirtcloud
-
-- Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
-
+    - Như vậy là đã kết nối tcp thành công.
+    
+          
+   - Ok ta đã cấu hình webvirtcloud
+    
+   - Truy cập vào trang webvirtcloud
+    
+        http://ip_cua_webvirtcloud
+    
+   - Giờ ta sẽ đi cấu hình dhcp server cho hệ thống VM.
+    
 
 
 <a href="https://github.com/letran3691/AoHoa/tree/master/dhcp" rel="nofollow"> Cấu hình DHCP Server <a/>
 
 
-#### Vậy là ta đã cấu hình xong 1 hệ thống ảo hóa vừa và nhỏ cho 1 doanh nghiệp.
+   #### Vậy là ta đã cấu hình xong 1 hệ thống ảo hóa vừa và nhỏ cho 1 doanh nghiệp.
 
-- Giờ chúng ta sẽ tìm hiểu qua 1 về giao diện của webvirtcloud.
+   - Giờ chúng ta sẽ tìm hiểu qua 1 về giao diện của webvirtcloud.
+    
+   - Như ở <a href="https://github.com/letran3691/Virtualization/tree/master/kvm#1.3" rel="nofollow"> **Topo** <a/>  các bạn cũng đã thấy toàn bộ VM trên 2 host KVM và KVM1  muốn ra được internet thì phải đi qua pfsense. Sẽ có 2 cách để các bạn truy cập vào webvirtcloud
+    
+   - 1 là cấu hình vpn trên pfsense để truy cập trực tiếp bằng ip của webvirtcloud.
+    
+   - 2 là NAT port trên pfsense và rồi truy vào webvirtcloud thông qua port NAT.
+    
+   ![Selection_001](https://user-images.githubusercontent.com/19284401/55217453-1f63fe00-5232-11e9-9f41-bbce0d25a8ac.png)
 
-- Như ở <a href="https://github.com/letran3691/Virtualization/tree/master/kvm#1.3" rel="nofollow"> **Topo** <a/>  các bạn cũng đã thấy toàn bộ VM trên 2 host KVM và KVM1  muốn ra được internet thì phải đi qua pfsense. Sẽ có 2 cách để các bạn truy cập vào webvirtcloud
-    
-    - 1 là cấu hình vpn trên pfsense để truy cập trực tiếp bằng ip của webvirtcloud.
-    
-    - 2 là NAT port trên pfsense và rồi truy vào webvirtcloud thông qua port NAT.
-    
-    ![Selection_001](https://user-images.githubusercontent.com/19284401/55217453-1f63fe00-5232-11e9-9f41-bbce0d25a8ac.png)
-
-    - Như các bạn đã thấy ỏ đây mình đã NAT webvirtcloud
+   - Như các bạn đã thấy ỏ đây mình đã NAT webvirtcloud
     
         - Ở đâu mình có NAT 2 port cho webvirtcloud 8088 là port web còn port 6080 là port novnc có tác dụng truy cập vào VM trực tiếp từ giao diện web.
         
