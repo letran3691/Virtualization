@@ -257,6 +257,37 @@
      
      ![Selection_005](https://user-images.githubusercontent.com/19284401/55218442-b631ba00-5234-11e9-817b-c51bcba99e8c.png)
      
+- Tạo mới VM từ giao diện webvirtcloud.
+
+    ![image](https://user-images.githubusercontent.com/19284401/55277581-8a95f900-5334-11e9-8ff8-28ff429204c8.png)
+    
+    - Chọn host sẽ tạo VM
+    
+     ![image](https://user-images.githubusercontent.com/19284401/55277587-9aadd880-5334-11e9-975a-dab2d2ec396d.png)
+     
+    - Các cách nào VM
+    
+    ![image](https://user-images.githubusercontent.com/19284401/55277620-f4160780-5334-11e9-8c4b-38fed649bc00.png)
+
+     - **Flavor**: tạo từ 1 cấu hình cho có sẵn hoặc bạn cũng có thể tự tạo cho mình 1 Flavor mới.
+     
+     - **Custom**: Tự tạo VM theo cách của bạn.
+     
+        - Ở phần này các bạn chú ý của mình 2 phần đó là **HDD** và **NETWORK** 
+        
+            - HDD: nó sẽ list ra cho các bạn nhưng disk đã có sẵn trong host. Tạo tạo ra 1 VM mẫu sau đó clone disk của VM đó ra, đến bước này các bạn chỉ việc chọn disk vừa clone ra vậy là xog ko cần phải cài đặt gì thêm cả
+            
+            - NETWORK: nó sẽ list ra các network mà các bạn đã tạo trước đi để các bạn chọn.
+            
+            ![image](https://user-images.githubusercontent.com/19284401/55277689-6f77b900-5335-11e9-819a-885f631fbeda.png)
+        
+     - **Template** cũng khá giống với **Custom**
+     
+     - **XML** các bạn tham khảo ở phần XML của các VM có sẵn nhé.
+     
+     
+    
+     
 - click vào **instances** các bạn sẽ thấy toàn bộ các VM đang có trên các host
      
      ![Selection_007](https://user-images.githubusercontent.com/19284401/55219744-49b8ba00-5238-11e9-90d2-a8ab01e2f5ad.png)
@@ -265,11 +296,11 @@
     
     ![Selection_008](https://user-images.githubusercontent.com/19284401/55219958-b8961300-5238-11e9-91be-2ada951f471b.png)
     
-   - Tab Power
+   - Tab **Power**
    
         - stop hoặc start 1 VM
         
-   - Tab Access
+   - Tab **Access**
 
         - dùng để kết nối noVNC   
         
@@ -279,7 +310,7 @@
      
     ![Selection_010](https://user-images.githubusercontent.com/19284401/55220299-86d17c00-5239-11e9-8a4f-a540db9ebd6a.png)
     
-   - Tab resize
+   - Tab **resize**
    
     ![Selection_011](https://user-images.githubusercontent.com/19284401/55220575-2858cd80-523a-11e9-85d9-1005b6bfa894.png)
     
@@ -291,7 +322,7 @@
             
             - Mục **Maximum Alocaltion** phải cao hơn Mục **Current alocaltion**. điều này cần có sự tính toán từ trước là VM này có cần nâng cấp về mặt phần cứng hay ko?
             
-    - Tab Snapshot
+    - Tab **Snapshot**
     
     ![Selection_013](https://user-images.githubusercontent.com/19284401/55221842-07de4280-523d-11e9-89c5-13a0036b0a82.png)
     
@@ -300,15 +331,51 @@
     ![Selection_015](https://user-images.githubusercontent.com/19284401/55222060-7fac6d00-523d-11e9-9929-5607a9f4fc85.png)
     ![Selection_016](https://user-images.githubusercontent.com/19284401/55222061-80450380-523d-11e9-9058-c39e3dae8558.png)
    
-   - Tab Setting
+   - Tab **Setting**
    
    ![Selection_017](https://user-images.githubusercontent.com/19284401/55222203-e29e0400-523d-11e9-8434-81cb72ff3a2c.png)
    
      - đây là tab có nhiều tính năng nhất. Chúng ta sẽ đi qua 1 vài tab quan trọng. còn lại các bạn tìm hiểu dần dần.
-     
+  
+        - Tab **Disk**
+        
+           ![image](https://user-images.githubusercontent.com/19284401/55277317-579e3600-5331-11e9-8d3c-f2d323f572f7.png)
+           
+           - Tab này có tác dụng để mount các disk có sẵn trong host 
+           
+           ![image](https://user-images.githubusercontent.com/19284401/55277342-a350df80-5331-11e9-948e-aac7bee64b1e.png)
+                
+             - Mặc định tab này bị ẩn khi VM đang chạy, tuy nhiên mình đã sửa lại code web để có thể mount trực tiếp khi VM đang chạy.
+
+           - Tab **Network** 
+           
+            ![image](https://user-images.githubusercontent.com/19284401/55277414-7a7d1a00-5332-11e9-919d-cdadd78d0e3e.png)
+            
+             - Tab này sẽ hiện thị thông tin về NIC của VM như MAC, IP, Tên Network mà VM đang kết nối, vị trí của port mà VM đang cắm trên OVS.
+             
+             - Bạn cũng có thể thêm NIC cho VM tại đây (VM phải được shutdown)
+             
+           - Tab **Migrate** 
+           
+            ![image](https://user-images.githubusercontent.com/19284401/55277439-d34cb280-5332-11e9-9a2e-d3950202cde5.png)
+            
+             - Cài tên nói lên tất cả. Nó sẽ chuyển VM từ host này sang host khác trong khi VM vẫn đang chạy.
+             
+             - Chú ý: Nếu VM của bạn đang có 1 snapshot bạn sẽ nhận đc 1 thông báo lỗi là ko thể Migrate với 1 Snapshot
+             
+           - Tab **XML**
+           
+             ![image](https://user-images.githubusercontent.com/19284401/55277535-ef048880-5333-11e9-88c0-a5d76996238e.png)
+             
+             - Đây là Tab lưu nội dung câu hình của 1 VM, các bạn cũng có thể sửa đổi cấu hình trực tiếp trên file này(VM phải đặc shutdown)
+
+        
+              
+          
+             
+             
        
-            
-            
+  
    
  
    
