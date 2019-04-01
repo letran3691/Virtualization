@@ -11,9 +11,10 @@
   - [2.3 Edit Webvirtcloud](#2.3)
   - [2.4 Phân quyền && restart](#2.4)
   - [2.5 Bảo mât](#2.5)
-
 ### [3 Tính năng cơ bản](#3)
 
+
+---------------------------------
 
 - Phần này thì mình cũng không có gì để giới thiệu, mình sẽ đi vào cấu hình luôn.
 
