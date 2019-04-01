@@ -385,6 +385,8 @@
              
              - Chú ý: Nếu VM của bạn đang có 1 snapshot bạn sẽ nhận đc 1 thông báo lỗi là ko thể Migrate với 1 Snapshot
              
+             -  Tham khảo thêm tại <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/chap-virtualization_administration_guide-kvm_live_migration" rel="nofollow">Đây<a/> và <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sect-virtualization-kvm_live_migration-live_kvm_migration_with_virsh" rel="nofllow">Đây<a/>
+             
            - Tab **XML**
            
              ![image](https://user-images.githubusercontent.com/19284401/55277535-ef048880-5333-11e9-88c0-a5d76996238e.png)
