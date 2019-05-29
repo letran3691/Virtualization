@@ -73,11 +73,11 @@ Trong kiến trúc của KVM, Virtual machine được thực hiện như là qu
 
 - Cài đặt eple-release
         
-        yum -y install epel-release
+        yum -y install epel-release centos-release-qemu-ev
         
 - Cài đặt các packet cần thiết.
 
-        yum -y install qemu-kvm libvirt virt-install libguestfs libvirt-client virt-manager virt-top virt-viewer virt-who
+        yum -y install qemu-kvm-ev libvirt virt-install libguestfs libvirt-client virt-manager virt-top virt-viewer virt-who
       
     - Ở đây mình không cài linux-bridge mà thay, vào đó mình sẽ cài OVS(open vswitch). mình sẽ nhắc đến ở phần sau
     
