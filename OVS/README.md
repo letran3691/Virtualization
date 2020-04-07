@@ -34,7 +34,7 @@ OpenvSwitch (OVS) là một dự án về chuyển mạch ảo đa lớp (multil
 
 - cài đặt repo hộ trợ OVS
 
-        yum -y localinstall https://repos.fedorapeople.org/repos/openstack/openstack-ocata/rdo-release-ocata-3.noarch.rpm
+        yum -y localinstall https://repos.fedorapeople.org/repos/openstack/openstack-queens/rdo-release-queens-0.noarch.rpm
         
 - Cài đặt ovs
 
